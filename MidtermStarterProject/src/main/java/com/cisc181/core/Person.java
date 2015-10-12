@@ -133,6 +133,18 @@ public abstract class Person {
 		System.out.println("age is " + age);
 
 		return age;
+		}
+	
+	public Person extendsException (Date DOB) 
+		throw PersonException
+	{
+		Calendar today = Calendar.getInstance();
+		Calendar birthDate = Calendar.getInstance();
+		age = today.get(Calendar.YEAR) - birthDate.get(Calendar.YEAR);
+		if (age > 100){
+			throw new PersonException(
+				        "You have entered the wrong DOB");
 
-	}
+		}
+
 }
